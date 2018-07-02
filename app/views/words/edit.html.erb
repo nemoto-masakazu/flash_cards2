@@ -1,0 +1,18 @@
+<div class="form-heading"></div>
+<h1>Update your words</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for @word, :url => {:action => :update} do |f| %>
+
+      <%= f.label :english %>
+      <%= f.text_field :english, class: 'form-control' %>
+
+      <%= f.label :japanese %>
+      <%= f.text_field :japanese, class: 'form-control' %>
+
+      <%= f.submit "変更を保存する", class: "btn btn-primary" %>
+    <% end %>
+
+  </div>
+</div>

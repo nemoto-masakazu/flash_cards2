@@ -1,0 +1,15 @@
+<div class="form-heading">ユーザー一覧</div>
+    <div class="form users-form">
+      <div class="form-body">
+        <% if flash[:caution] %>
+          <h2><%= flash[:caution] %></h2>
+        <% end %>
+
+        <% @users.each do |user| %>
+          <div class="posts-index-item">
+            <%= link_to(user.name, "/users/#{user.id}") %>
+          </div>
+        <% end %>
+
+      </div>
+    </div>

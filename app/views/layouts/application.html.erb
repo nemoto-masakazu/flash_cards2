@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FlashCards2</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= yield %>
+    <ul class="header-menus">
+      <li>
+        <%= link_to("top", "/top") %>
+      </li>
+      <li>
+        <%= link_to("ユーザー一覧", "/users/index") %>
+      </li>
+      <li>
+        <%= link_to("単語登録", "/words/new_word") %>
+      </li>
+      <li>
+        <%= link_to("クイズへの入り口", "/quizzes/new") %>
+      </li>
+      <!-- ユーザー一覧ページへのリンクを作成してください -->
+      <li>
+        <%= link_to("ログアウト", "/sessions/logout") %>
+      </li>
+    </ul>
+  </body>
+</html>

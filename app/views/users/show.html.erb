@@ -1,0 +1,11 @@
+<div class="form-heading">ユーザー画面</div>
+    <div class="form users-form">
+      <div class="form-body">
+
+        <h2><%= @user.name %></h2>
+        <%= link_to("編集", "/users/#{@user.id}/edit") %>
+        <%= link_to("削除", "/users/#{@user.id}/delete") %>
+
+
+      </div>
+    </div>

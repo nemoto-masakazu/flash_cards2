@@ -1,0 +1,39 @@
+<% if @judgeAnswer %>
+  <h1>正解です</h1>
+  <h2><%= @question %> = <%= @correctJapanese %></h2>
+<% else %>
+  <h1>不正解です</h1>
+  <h2><%= @question %> = <%= @correctJapanese %></h2>
+<% end %>
+
+<li>
+  <%= link_to("next", "/quizzes/show") %>
+</li>
+
+<script type="text/javascript">
+
+    // History APIが使用可能ブラウザか確認
+    if (history && history.pushState && history.state != undefined) {
+        // ブラウザの履歴に戻る無効を追加
+        history.pushState(null, null, null);
+        // 戻るボタン押下でイベント発動
+        window.addEventListener("popstate", function () {
+            alert("始めからやり直してください。\n" + "topに戻ります")
+            history.go(0);
+            history.pushState(null, null, "/top");
+            // var judge = confirm("クイズ失格になりますが、よろしいですか？");
+            // if (judge) {
+            //
+            //     history.go(0);
+            //     history.pushState(null, null, "/top");
+            // }
+            // else {
+            //
+            //     history.pushState(null, null, null);
+            // }
+
+        }, false);
+    }
+
+
+</script>

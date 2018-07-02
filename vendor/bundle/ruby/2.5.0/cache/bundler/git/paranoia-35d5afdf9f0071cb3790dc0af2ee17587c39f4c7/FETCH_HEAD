@@ -1,0 +1,42 @@
+7866b73df405faf934081cc23b33847618707b81		branch '2-0-stable' of https://github.com/rubysherpas/paranoia
+a21cf4d2ef39996f4bdf59030b1c00307269dc3f		branch '2-1-stable' of https://github.com/rubysherpas/paranoia
+f960e52de84504fea3729c91df25d0743ded0f4f		branch '2-2-stable' of https://github.com/rubysherpas/paranoia
+1434cc672af77212658d70d437c0c7f8331e06e1		branch 'core' of https://github.com/rubysherpas/paranoia
+0f69a0dd1139f5c714946b0cc5963aa740b034b3		branch 'rails3' of https://github.com/rubysherpas/paranoia
+bd3383729c790bf09e488f84221eaaea27c6597e		branch 'rails4' of https://github.com/rubysherpas/paranoia
+d70c4c5a7098d4c8416332489e3f63b0a959ab97		branch 'rails5' of https://github.com/rubysherpas/paranoia
+37b941fb214d508e4b085d8c969043d770419e37		branch 'really-destroy' of https://github.com/rubysherpas/paranoia
+3c0d897a3e0eb49c7ff8ee7ad9ba221d41ff160a		branch 'release-3.0.0' of https://github.com/rubysherpas/paranoia
+b29bc4dd33aa614eff920122594cc2f9cf88272a	not-for-merge	tag '2.2.0' of https://github.com/rubysherpas/paranoia
+70f6e37b7b32cf4f70c5b852a38597699f476c62	not-for-merge	tag '2.2.0.pre' of https://github.com/rubysherpas/paranoia
+ba48f19640d8791b57d9755dfdb41a77576b825c	not-for-merge	tag '2.2.1' of https://github.com/rubysherpas/paranoia
+07c8e8b624287a4395b1ef351dc52f0ab239e082	not-for-merge	tag '2.3.0' of https://github.com/rubysherpas/paranoia
+b3c16ddee46ec266cde9ee3b284ad0d245aeb48f	not-for-merge	tag 'v0.0.1' of https://github.com/rubysherpas/paranoia
+9f2ae45a771a111f63e72778d1200974ed9a1d99	not-for-merge	tag 'v1.0.0' of https://github.com/rubysherpas/paranoia
+13dec1a04ac6f6bdbc8bde88550486d632f58675	not-for-merge	tag 'v1.0.1' of https://github.com/rubysherpas/paranoia
+b3c5a11a0df52a918e501194af6b640d5f3c9d6a	not-for-merge	tag 'v1.0.2' of https://github.com/rubysherpas/paranoia
+3b2cacc70bb4c5e7cb36b0300c7b02e4cf1e09bd	not-for-merge	tag 'v1.0.3' of https://github.com/rubysherpas/paranoia
+d296a116b101864c724dd7024c2e1056b55cbda3	not-for-merge	tag 'v1.1.0' of https://github.com/rubysherpas/paranoia
+7de38309bd55fb709658f905f81cc93ac8fee282	not-for-merge	tag 'v1.2.0' of https://github.com/rubysherpas/paranoia
+b751175e60f7cf87e68b6a0048cdf0de2d78f2a9	not-for-merge	tag 'v1.3.0' of https://github.com/rubysherpas/paranoia
+c1a6cef243d3457dcb605d6ff087c738d967cfa9	not-for-merge	tag 'v1.3.1' of https://github.com/rubysherpas/paranoia
+86dac809ba23ace144073ca097e3f68e70c02ce5	not-for-merge	tag 'v1.3.2' of https://github.com/rubysherpas/paranoia
+0e42cea1dde38bb76ec23b06776cdbd92ca96a4d	not-for-merge	tag 'v1.3.3' of https://github.com/rubysherpas/paranoia
+7a1bce8a2d01fa9fdc679900528f1618a8b00f7d	not-for-merge	tag 'v1.3.4' of https://github.com/rubysherpas/paranoia
+1a53b8ac39b2d3b273aebb1a835eee376bf1b1b6	not-for-merge	tag 'v2.0.0' of https://github.com/rubysherpas/paranoia
+b131ef60c3639ebb7a3b4218d679216b7ab339c8	not-for-merge	tag 'v2.0.1' of https://github.com/rubysherpas/paranoia
+244961bfe3d057c34c8d9472a9c4eae9e7c9bca2	not-for-merge	tag 'v2.0.2' of https://github.com/rubysherpas/paranoia
+0edc7bf388d6f1d4674226434722ea8538cf687e	not-for-merge	tag 'v2.0.3' of https://github.com/rubysherpas/paranoia
+624869543e5d21ef2519b78b999e7786f0d446c2	not-for-merge	tag 'v2.0.4' of https://github.com/rubysherpas/paranoia
+dbbbe69bab4787a3e87021a87fa462ed7fe500aa	not-for-merge	tag 'v2.0.5' of https://github.com/rubysherpas/paranoia
+3c5ef431a4652e9736165cbf56b7773b485694c9	not-for-merge	tag 'v2.1.0' of https://github.com/rubysherpas/paranoia
+84c571c89067050f86d4050e6b2bc9120440343a	not-for-merge	tag 'v2.1.0.pre' of https://github.com/rubysherpas/paranoia
+4c8cfa03c6328ef18b3af3e8913530a0e2ed6f21	not-for-merge	tag 'v2.1.1' of https://github.com/rubysherpas/paranoia
+79029d00891764cfb1f20cf3a3c35579c54bf38e	not-for-merge	tag 'v2.1.2' of https://github.com/rubysherpas/paranoia
+47a3ef1eeab79230fe4a45d6ab648f41ecb3193f	not-for-merge	tag 'v2.1.3' of https://github.com/rubysherpas/paranoia
+cc41d19f395495b57e9c3d3bc16a1ae067c1416e	not-for-merge	tag 'v2.1.4' of https://github.com/rubysherpas/paranoia
+6e7f06d2fbcd9a984bb25b91dbe60d79e1be1e88	not-for-merge	tag 'v2.1.5' of https://github.com/rubysherpas/paranoia
+747c7bc6ce59c51c954d11be63a28065734c9f94	not-for-merge	tag 'v2.2.0' of https://github.com/rubysherpas/paranoia
+e1f7f33eed1660802aff48b942b51a29d3b5e7ff	not-for-merge	tag 'v2.3.1' of https://github.com/rubysherpas/paranoia
+39dacfc997635d19a558f3d0ca50efc57d3d88f8	not-for-merge	tag 'v2.4.0' of https://github.com/rubysherpas/paranoia
+cb75926bf8f2528e17436bc2cd052e956aeee987	not-for-merge	tag 'v2.4.1' of https://github.com/rubysherpas/paranoia

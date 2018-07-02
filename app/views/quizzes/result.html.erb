@@ -1,0 +1,31 @@
+
+<% if session[:correctCounter].nil? %>
+  <h1>ランキング</h1>
+<% else %>
+  <h1>結果</h1>
+  <h2><%= session[:questionNum] %>問中<%= session[:correctCounter] %>問正解</h2>
+  <h1>ランキング</h1>
+<% end %>
+
+<table border="1">
+  <thead>
+  <tr>
+    <th>順位</th>
+    <th>名前</th>
+    <th>正答数</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% rankOrder = 1 %>
+  <% @ranking.each do |rank| %>
+    <tr>
+      <td><%= rankOrder %></td>
+      <td><%= rank.name %></td>
+      <td><%= rank.correct_answers %></td>
+    </tr>
+    <% rankOrder = rankOrder + 1 %>
+  <% end %>
+  </tbody>
+</table>
+
+<h2>現在<%= @rankAmount %>人中第<%= @yourRank %>位</h2>

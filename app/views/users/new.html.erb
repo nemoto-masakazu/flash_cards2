@@ -1,0 +1,19 @@
+<div class="form-heading">新規ユーザー登録</div>
+    <div class="form users-form">
+      <div class="form-body">
+
+      <%= form_for @user, :url => {:action => :create} do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+
+      <%= f.label :password_confirmation, "確認" %>
+      <%= f.password_field :password_confirmation %>
+
+      <%= f.submit "新規作成", class: "btn btn-primary"  %>
+    <% end %>
+
+      </div>
+    </div>
