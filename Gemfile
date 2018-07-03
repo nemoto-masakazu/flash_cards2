@@ -74,11 +74,11 @@ gem 'kaminari'
 gem 'dotenv-rails' #環境変数を簡単に扱うのに使用
 
 group :development, :test do
-  gem 'capistrano', '~> 3.2.1'
-  gem 'capistrano-rails'
-  gem 'capistrano-rbenv'
-  gem 'capistrano-bundler'
-  gem 'capistrano3-unicorn' #Unicornの起動を簡単に行える
+  gem 'capistrano'
+  gem 'capistrano-rails', require: false
+  gem 'capistrano-rbenv', require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano3-unicorn', require: false #Unicornの起動を簡単に行える
 end
 
 group :production, :staging do

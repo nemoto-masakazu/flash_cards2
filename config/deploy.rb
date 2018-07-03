@@ -1,5 +1,5 @@
 # config valid only for Capistrano 3.1
-lock '3.2.1'
+#lock '3.11.0'
 
 set :application, 'flash_cards2'
 set :repo_url, 'git@github.com:nemoto-masakazu/flash_cards2.git'
