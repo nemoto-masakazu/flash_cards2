@@ -38,6 +38,7 @@ set :rbenv_type, :user
 set :rbenv_ruby, '2.5.1-p57'     #rubyのバージョン間違えないように!
 set :rbenv_map_bins, %w{rake gem bundle ruby rails}
 set :rbenv_roles, :all
+set :rbenv_path, '~/.rbenv'
 set :linked_dirs, %w{bin log tmp/backup tmp/pids tmp/cache tmp/sockets vendor/bundle}
 
 
