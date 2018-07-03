@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="39c62bca-9cb2-438c-8fae-055d8b2bca9c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/deploy/production.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/deploy/production.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/2.5.0/bundler/gems/paranoia-d70c4c5a7098" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.5.0/bundler/gems/paranoia-d70c4c5a7098" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -49,20 +49,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="deploy.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="deploy.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/deploy.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="68" lean-forward="true" selection-start-line="7" selection-start-column="68" selection-end-line="7" selection-end-column="68" />
+            <state relative-caret-position="375">
+              <caret line="25" column="44" lean-forward="true" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="production.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="production.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/deploy/production.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
-              <caret line="36" column="22" lean-forward="true" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
+            <state relative-caret-position="420">
+              <caret line="28" column="43" lean-forward="true" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -156,13 +156,13 @@
         <option value="$PROJECT_DIR$/app/views/quizzes/answer.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
         <option value="$PROJECT_DIR$/config/unicorn.rb" />
-        <option value="$PROJECT_DIR$/config/deploy/production.rb" />
         <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/config/deploy.rb" />
         <option value="$PROJECT_DIR$/Capfile" />
+        <option value="$PROJECT_DIR$/config/deploy/production.rb" />
       </list>
     </option>
   </component>
@@ -469,7 +469,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="173431000" />
+    <option name="totallyTimeSpent" value="174815000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="962" extended-state="0" />
@@ -879,13 +879,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/deploy/production.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="36" column="22" lean-forward="true" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Capfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -909,8 +902,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/deploy.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="68" lean-forward="true" selection-start-line="7" selection-start-column="68" selection-end-line="7" selection-end-column="68" />
+        <state relative-caret-position="375">
+          <caret line="25" column="44" lean-forward="true" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/deploy/production.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="43" lean-forward="true" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
         </state>
       </provider>
     </entry>
