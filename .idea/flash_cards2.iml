@@ -244,16 +244,18 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="capistrano (vbundled(3.2.1)) [path][gem]">
+      <library name="capistrano (vbundled(3.11.0)) [path][gem]">
         <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/capistrano-3.2.1/features" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/capistrano-3.2.1/lib" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/capistrano-3.2.1/bin" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/capistrano-3.11.0/.github" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/capistrano-3.11.0/features" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/capistrano-3.11.0/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/capistrano-3.11.0/bin" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/capistrano-3.2.1/features" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/capistrano-3.2.1/lib" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/capistrano-3.2.1/bin" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/capistrano-3.11.0/.github" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/capistrano-3.11.0/features" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/capistrano-3.11.0/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/capistrano-3.11.0/bin" />
         </SOURCES>
       </library>
     </orderEntry>
@@ -1096,12 +1098,12 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="uglifier (vbundled(4.1.12)) [path][gem]">
+      <library name="uglifier (vbundled(4.1.14)) [path][gem]">
         <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/uglifier-4.1.12/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/uglifier-4.1.14/lib" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/uglifier-4.1.12/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/uglifier-4.1.14/lib" />
         </SOURCES>
       </library>
     </orderEntry>
