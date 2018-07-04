@@ -41,6 +41,10 @@ set :rbenv_roles, :all
 set :rbenv_path, '/home/flash/.rbenv'
 set :linked_dirs, %w{bin log tmp/backup tmp/pids tmp/cache tmp/sockets vendor/bundle}
 
+# シンボリックリンクをはるファイル。(※後述)
+set :linked_files, fetch(:linked_files, []).push('config/master.key')
+
+
 
 namespace :deploy do
 
