@@ -86,3 +86,4 @@ production:
   password: flash
   host: 18.179.163.165
   database: flash_cards2_production
+  port: 5432
