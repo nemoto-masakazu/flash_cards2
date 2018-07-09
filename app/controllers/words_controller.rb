@@ -13,6 +13,12 @@ class WordsController < ApplicationController
 
   def show
     @word = Word.find_by(id: params[:id])
+
+    # mechanizeを利用してスクレイピング、例文として利用
+    agent = Mechanize.new
+    page = agent.get("https://ejje.weblio.jp/content/#{@word.english}")
+    @example = page.search("table.KejjeYr div.KejjeYrHd")
+
   end
 
   def edit

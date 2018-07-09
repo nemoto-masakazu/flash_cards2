@@ -72,6 +72,9 @@ gem "paranoia", "~> 2.2"
 #ページネーション
 gem 'kaminari'
 
+#webスクレイピング
+gem 'mechanize'
+
 ###これ以下はデプロイに必要そうなgemfile 上手くいかなければ削除
 gem 'dotenv-rails' #環境変数を簡単に扱うのに使用
 

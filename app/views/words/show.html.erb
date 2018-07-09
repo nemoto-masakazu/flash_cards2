@@ -4,6 +4,16 @@
 
         <h2><%= @word.english %></h2>
         <h2><%= @word.japanese %></h2>
+
+        <%# 一行目だけだと微妙な例文があるため、二行目まで取得 %>
+        <h4>例文</h4>
+        <% @example.first(2).each do |e| %>
+          <%= e.inner_text %>
+          <br>
+        <% end %>
+
+        <br>
+        <br>
         <%= link_to("編集", "/words/#{@word.id}/edit") %>
         <%= link_to("削除", "/words/#{@word.id}/delete") %>
 

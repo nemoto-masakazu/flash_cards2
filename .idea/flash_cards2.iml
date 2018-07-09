@@ -376,12 +376,36 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
+      <library name="connection_pool (vbundled(2.2.2)) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/connection_pool-2.2.2/lib" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/connection_pool-2.2.2/lib" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
       <library name="crass (vbundled(1.0.4)) [path][gem]">
         <CLASSES>
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/crass-1.0.4/lib" />
         </CLASSES>
         <SOURCES>
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/crass-1.0.4/lib" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="domain_name (vbundled(0.5.20180417)) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/domain_name-0.5.20180417/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/domain_name-0.5.20180417/tool" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/domain_name-0.5.20180417/data" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/domain_name-0.5.20180417/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/domain_name-0.5.20180417/tool" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/domain_name-0.5.20180417/data" />
         </SOURCES>
       </library>
     </orderEntry>
@@ -448,6 +472,16 @@
         </CLASSES>
         <SOURCES>
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/globalid-0.4.1/lib" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="http-cookie (vbundled(1.0.3)) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/http-cookie-1.0.3/lib" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/http-cookie-1.0.3/lib" />
         </SOURCES>
       </library>
     </orderEntry>
@@ -592,12 +626,44 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
+      <library name="mechanize (vbundled(2.7.6)) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/mechanize-2.7.6/lib" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/mechanize-2.7.6/lib" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
       <library name="method_source (vbundled(0.9.0)) [path][gem]">
         <CLASSES>
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/method_source-0.9.0/lib" />
         </CLASSES>
         <SOURCES>
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/method_source-0.9.0/lib" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="mime-types (vbundled(3.1)) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/mime-types-3.1/lib" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/mime-types-3.1/lib" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="mime-types-data (vbundled(3.2016.0521)) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/mime-types-data-3.2016.0521/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/mime-types-data-3.2016.0521/data" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/mime-types-data-3.2016.0521/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/mime-types-data-3.2016.0521/data" />
         </SOURCES>
       </library>
     </orderEntry>
@@ -690,6 +756,28 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
+      <library name="net-http-digest_auth (vbundled(1.4.1)) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/net-http-digest_auth-1.4.1/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/net-http-digest_auth-1.4.1/sample" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/net-http-digest_auth-1.4.1/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/net-http-digest_auth-1.4.1/sample" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="net-http-persistent (vbundled(3.0.0)) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/net-http-persistent-3.0.0/lib" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/net-http-persistent-3.0.0/lib" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
       <library name="net-scp (vbundled(1.2.1)) [path][gem]">
         <CLASSES>
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/net-scp-1.2.1/lib" />
@@ -742,6 +830,16 @@
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.4/suppressions" />
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.4/lib" />
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.4/ext" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="ntlm-http (vbundled(0.1.1)) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/ntlm-http-0.1.1/lib" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/ntlm-http-0.1.1/lib" />
         </SOURCES>
       </library>
     </orderEntry>
@@ -1030,12 +1128,12 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="sshkit (vbundled(1.16.1)) [path][gem]">
+      <library name="sshkit (vbundled(1.17.0)) [path][gem]">
         <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/sshkit-1.16.1/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/sshkit-1.17.0/lib" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/sshkit-1.16.1/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/sshkit-1.17.0/lib" />
         </SOURCES>
       </library>
     </orderEntry>
@@ -1122,6 +1220,28 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
+      <library name="unf (vbundled(0.1.4)) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/unf-0.1.4/lib" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/unf-0.1.4/lib" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="unf_ext (vbundled(0.0.7.5)) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/unf_ext-0.0.7.5/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/unf_ext-0.0.7.5/ext" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/unf_ext-0.0.7.5/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/unf_ext-0.0.7.5/ext" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
       <library name="unicorn (vbundled(5.4.0)) [path][gem]">
         <CLASSES>
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/unicorn-5.4.0/bin" />
@@ -1150,6 +1270,16 @@
         </CLASSES>
         <SOURCES>
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/web-console-3.6.2/lib" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="webrobots (vbundled(0.1.2)) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/webrobots-0.1.2/lib" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/webrobots-0.1.2/lib" />
         </SOURCES>
       </library>
     </orderEntry>
