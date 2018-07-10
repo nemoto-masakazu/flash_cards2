@@ -6,34 +6,34 @@
   <h2><%= @question %> = <%= @correctJapanese %></h2>
 <% end %>
 
-<li>
-  <%= link_to("next", "/quizzes/show") %>
-</li>
+<% if @questionsLength != 0 %>
+  <li>
+    <%= link_to("next", "/quizzes/show") %>
+  </li>
+<% end %>
+
 
 <script type="text/javascript">
 
-    // History APIが使用可能ブラウザか確認
-    if (history && history.pushState && history.state != undefined) {
-        // ブラウザの履歴に戻る無効を追加
-        history.pushState(null, null, null);
-        // 戻るボタン押下でイベント発動
-        window.addEventListener("popstate", function () {
-            alert("始めからやり直してください。\n" + "topに戻ります")
-            history.go(0);
-            history.pushState(null, null, "/top");
-            // var judge = confirm("クイズ失格になりますが、よろしいですか？");
-            // if (judge) {
-            //
-            //     history.go(0);
-            //     history.pushState(null, null, "/top");
-            // }
-            // else {
-            //
-            //     history.pushState(null, null, null);
-            // }
+  var questionLength = <%=@questionsLength %>;
+  function link() {
+      location.href = "/quizzes/result";
+  }
+  if (questionLength == 0) {
+      setTimeout("link()", 3000);
+      document.write("ランキングを表示します");
+  }
 
-        }, false);
-    }
-
+  // History APIが使用可能ブラウザか確認
+  if (history && history.pushState && history.state != undefined) {
+      // ブラウザの履歴に戻る無効を追加
+      history.pushState(null, null, null);
+      // 戻るボタン押下でイベント発動
+      window.addEventListener("popstate", function () {
+          alert("始めからやり直してください。\n" + "topに戻ります")
+          history.go(0);
+          history.pushState(null, null, "/home/show");
+      }, false);
+  }
 
 </script>

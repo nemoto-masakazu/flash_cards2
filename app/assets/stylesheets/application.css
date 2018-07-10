@@ -15,8 +15,16 @@
  */
 
 
-ul.header-menus {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+ul.menu{
+    padding: 20px;
+    letter-spacing: -1em;
+}
+ul.menu li{
+    display: inline-block;
+    border: 1px solid #D35400;
+    padding: 10px;
+    background: #F39C12;
+    width: 100px;
+    text-align: center;
+    letter-spacing: 0em;
 }

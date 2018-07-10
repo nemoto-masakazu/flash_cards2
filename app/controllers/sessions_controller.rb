@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
 
   def new
     if session[:user_id] != nil
-      redirect_to "/top"
+      redirect_to "/home/show"
     else
       render "sessions/new"
     end
@@ -13,10 +13,10 @@ class SessionsController < ApplicationController
     user = User.find_by(name: params[:session][:name].downcase)
     if user && user.authenticate(params[:session][:password])
       log_in user
-      redirect_to "/top"
+      redirect_to "/home/show"
 
     else
-      flash.now[:danger] = "Invalid name/password combination"
+      flash[:danger] = "名前/パスワードが不正な値です"
       render "new"
     end
   end

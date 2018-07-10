@@ -1,22 +1,25 @@
 class UsersController < ApplicationController
   skip_before_action :user_logged_in?, only: [:new, :create]
   before_action :correct_user, only: [:edit, :update, :destroy]
-
+  before_action :destroy_quiz_session
 
   def index
     @users = User.all
   end
 
   def show
-    @user = User.find_by(id: params[:id])
+    @user = User.new.get_a_registered_user(params[:id])
+    if @user.nil?
+      redirect_to "/users/index"
+    end
   end
 
   def edit
-    @user = User.find_by(id: params[:id])
+    @user = User.new.get_a_registered_user(params[:id])
   end
 
   def update
-    @user = User.find_by(id: params[:id])
+    @user = User.new.get_a_registered_user(params[:id])
     if @user.update_attributes(user_params)
       # 更新に成功したときの処理
       render "show"
@@ -26,9 +29,9 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    @user = User.find_by(id: params[:id])
+    @user = User.new.get_a_registered_user(params[:id])
     if @user.destroy
-      redirect_to("/sessions/login")
+      redirect_to "/sessions/login"
     else
       render "index"
     end
@@ -43,9 +46,9 @@ class UsersController < ApplicationController
     @quiz = Quiz.new
     if @user.save
       flash[:notice] = "ユーザー登録が完了しました"
-      redirect_to("/top")
+      redirect_to "/home/show"
     else
-      render("users/new")
+      render "users/new"
     end
   end
 
@@ -56,11 +59,11 @@ class UsersController < ApplicationController
                                    :password_confirmation)
     end
 
-    # 正しいユーザーかどうか確認
-    def correct_user
-      @user = User.find(params[:id])
-      flash[:caution] = "自分のユーザーしか編集できません"
-      redirect_to("/users/index") unless @user == current_user
-    end
+  # 正しいユーザーかどうか確認
+  def correct_user
+    @user = User.find_by_id(params[:id])
+    flash[:caution] = "ログインユーザーしか編集できません"
+    redirect_to "/users/index" unless @user == current_user
+  end
 
 end

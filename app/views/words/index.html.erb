@@ -1,20 +1,29 @@
-単語一覧
-<table border="1">
-  <thead>
-  <tr>
-    <th></th>
-    <th>英語</th>
-    <th>日本語</th>
-  </tr>
-  </thead>
-  <tbody>
-  <% @words.each do |word| %>
-      <tr>
-        <td><%= link_to("詳細", "/words/#{word.id}") %></td>
-        <td><%= word.english %></td>
-        <td><%= word.japanese %></td>
-      </tr>
-  <% end %>
-  <%= paginate @words %>
-  </tbody>
-</table>
+<h2>単語一覧</h2>
+
+<% if flash[:words_none] %>
+  <h3><%= flash[:words_none] %></h3>
+<% else %>
+  <table border="1">
+    <thead>
+    <tr>
+      <th></th>
+      <th>英語</th>
+      <th>日本語</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @words.each do |word| %>
+        <tr>
+          <td><%= link_to("詳細", "/words/#{word.id}") %></td>
+          <td><%= word.english %></td>
+          <td><%= word.japanese %></td>
+        </tr>
+    <% end %>
+    <%= paginate @words %>
+    </tbody>
+  </table>
+<% end %>
+
+<li>
+  <%= link_to("単語を登録する", "/words/new_word") %>
+</li>

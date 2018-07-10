@@ -1,97 +1,43 @@
-<div class="form-heading">いま何問目？</div>
+<div class="form-heading"></div>
     <div class="form users-form">
       <div class="form-body">
 
-
-
+        第<%= @questionNum %>問
         <h1><%= @question %></h1>
 
         <%= form_tag({:controller => "quizzes", :action => "answer"}, {:method => :get}) do %>
 
+          <% i = 0 %>
           <% @choices.each do |choice| %>
-            <%= radio_button_tag(:answer, choice) %>
-            <%= label_tag choice %>
-            <br>
+            <% if i == 0 %>
+              <%= radio_button_tag(:answer, choice, true) %>
+              <%= label_tag choice %>
+              <% i = i + 1 %>
+              <br>
+            <% else %>
+              <%= radio_button_tag(:answer, choice) %>
+              <%= label_tag choice %>
+              <br>
+            <% end %>
           <% end %>
 
           <%= submit_tag("これだぁぁぁぁx「", class: "btn btn-primary") %>
         <% end %>
 
-        <%# session[:questions].each do |question| %>
-<!--          <div class="posts-index-item">-->
-            <%#= question %>
-<!--          </div>-->
-        <%# end %>
-
-        <%#= session[:question]%>
-
-        <%#= @questions.length%>
-        <%#= @cC%>
-
-
         <script type="text/javascript">
-
-          //本当はcomfirm的に実装したいができなかった
-            // History APIが使用可能ブラウザか確認
-            if (history && history.pushState && history.state != undefined) {
-                // ブラウザの履歴に戻る無効を追加
-                history.pushState(null, null, null);
-                // 戻るボタン押下でイベント発動
-                window.addEventListener("popstate", function () {
-                    alert("始めからやり直してください。\n" + "topに戻ります")
-                    history.go(0);
-                    history.pushState(null, null, "/top");
-                    // var judge = confirm("クイズ失格になりますが、よろしいですか？");
-                    // if (judge) {
-                    //
-                    //     history.go(0);
-                    //     history.pushState(null, null, "/top");
-                    // }
-                    // else {
-                    //
-                    //     history.pushState(null, null, null);
-                    // }
-
-                }, false);
-            }
-
-//             // History APIが使用可能ブラウザか確認
-//             if (history && history.pushState && history.state != undefined) {
-//                 // ブラウザの履歴に戻る無効を追加
-//                 history.pushState(null, null, null);
-//                 // 戻るボタン押下でイベント発動
-//                 window.addEventListener("popstate", function () {
-//                     var judge = confirm("クイズ失格になりますが、よろしいですか？");
-//                     if(judge){
-//                         history.go(0);
-//                         history.pushState(null, null, "/top");
-//                     }
-//                     else{
-//                         history.pushState(null, null, null);
-//                     }
-//
-//                     // // 確認メッセージ表示
-//                     // window.onbeforeunload = function (e) {
-//                     //     return 'このページから離れますか？';
-//                     // };
-//                     // このページを離れるを押した場合さらに１つ履歴を戻る
-//                     // (通常のブラウザバックと同じ挙動)
-//                     // ページを離れない場合は再度ブラウザ戻るボタンを押した時用に
-//                     // 履歴無効を追加
-//                     // history.go(0);
-//                     // history.pushState(null, null, "/top");
-//
-//                 }, false);
-//            }
-
-            // window.onbeforeunload = function (e) {
-            //     return 'このページから離れますか？';
-            // };
-
+          //本当は戻る戻らない選択式の実装したいができなかった
+          // History APIが使用可能ブラウザか確認
+          if (history && history.pushState && history.state != undefined) {
+              // ブラウザの履歴に戻る無効を追加
+              history.pushState(null, null, null);
+              // 戻るボタン押下でイベント発動
+              window.addEventListener("popstate", function () {
+                  alert("始めからやり直してください。\n" + "topに戻ります")
+                  history.go(0);
+                  history.pushState(null, null, "/home/show");
+              }, false);
+          }
         </script>
-
-
-
 
       </div>
     </div>

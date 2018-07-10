@@ -23,4 +23,14 @@ class ApplicationController < ActionController::Base
     @current_user = nil
   end
 
+  def destroy_quiz_session
+    #sessionのクイズデータを削除
+    session.delete(:ref)
+    session.delete(:questions)
+    session.delete(:question)
+    session.delete(:questionCounter)
+    session.delete(:correctCounter)
+    session.delete(:questionNum)
+  end
+
 end

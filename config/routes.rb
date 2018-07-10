@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   patch "words/:id/update" => "words#update"
   get "words/:id/edit" => "words#edit"
 
-  get "top" => "home#top"
+  get "home/show" => "home#show"
 
   get "users/:id/delete" => "users#destroy"
   patch "users/:id/update" => "users#update"

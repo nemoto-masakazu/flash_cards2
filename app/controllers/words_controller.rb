@@ -1,46 +1,69 @@
 class WordsController < ApplicationController
-  before_action :correct_user, only: [:show, :edit, :update, :destroy]
+  before_action :user_logged_in?
+  before_action :correct_user, only: [:show, :edit, :update, :destroy, :index]
+  before_action :destroy_quiz_session
 
 
   def new
     @word = Word.new
   end
 
-  #per()の数字で何個表示するか
   def index
-    @words = Word.where(user_id: session[:user_id]).page(params[:page]).per(10)
+    @words = Word.where(user_id: session[:user_id]).page(params[:page]).per(10) #per()の数字で何個表示するか
+
+    if @words.empty?
+      flash.now[:words_none] = "まだ単語が未登録です。単語を登録してください"
+    end
   end
 
   def show
-    @word = Word.find_by(id: params[:id])
-
-    # mechanizeを利用してスクレイピング、例文として利用
-    agent = Mechanize.new
-    page = agent.get("https://ejje.weblio.jp/content/#{@word.english}")
-    @example = page.search("table.KejjeYr div.KejjeYrHd")
+    @word = Word.new.get_a_registered_word(params[:id], session[:user_id])
+    if @word.nil?
+      #flash.now[:unregister] = "そのurlは許可されていません"
+      redirect_to "/words/index"
+    else
+      # mechanizeを利用してスクレイピング、例文として利用
+      agent = Mechanize.new
+      page = agent.get("https://ejje.weblio.jp/content/#{@word.english}")
+      @example = page.search("table.KejjeYr div.KejjeYrHd")
+    end
 
   end
 
   def edit
-    @word = Word.find_by(id: params[:id])
+    @word = Word.new.get_a_registered_word(params[:id], session[:user_id])
+    if @word.nil?
+      #flash.now[:unregister] = "そのurlは許可されていません"
+      redirect_to "/words/index"
+    end
   end
 
   def destroy
-    @word = Word.find_by(id: params[:id])
-    if @word.destroy
-      redirect_to("/words/index")
+    @word = Word.new.get_a_registered_word(params[:id], session[:user_id])
+    if @word.nil?
+      #flash.now[:unregister] = "そのurlは許可されていません"
+      redirect_to "/words/index"
     else
-      render "show"
+      if @word.destroy
+        redirect_to "/words/index"
+      else
+        render "show"
+      end
     end
   end
 
   def update
-    @word = Word.find_by(id: params[:id])
-    if @word.update_attributes(word_params)
-      # 更新に成功したときの処理
-      render "show"
+    @word = Word.new.get_a_registered_word(params[:id], session[:user_id])
+    if @word.nil?
+      #flash.now[:unregister] = "そのurlは許可されていません"
+      redirect_to "/words/index"
     else
-      render "edit"
+      if @word.update_attributes(word_params)
+        # 更新に成功したときの処理
+        render "show"
+      else
+        render "edit"
+      end
     end
   end
 
@@ -49,10 +72,9 @@ class WordsController < ApplicationController
     @word.user_id = session[:user_id]
     if @word.save
       #flash[:notice] = "単語の登録が完了しました"
-      redirect_to controller: "words", action: "index"
-      #redirect_to("/words/index")
+      redirect_to "/words/index"
     else
-      render("words/new")
+      render "words/new"
     end
   end
 
@@ -63,7 +85,7 @@ class WordsController < ApplicationController
 
     # 正しいユーザーかどうか確認
     def correct_user
-      @user = @current_user
+      @user = User.find_by_id(session[:user_id])
       redirect_to("/words/index") unless @user == current_user
     end
 

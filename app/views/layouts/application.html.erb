@@ -11,23 +11,23 @@
 
   <body>
     <%= yield %>
-    <ul class="header-menus">
-      <li>
-        <%= link_to("top", "/top") %>
-      </li>
-      <li>
-        <%= link_to("ユーザー一覧", "/users/index") %>
-      </li>
-      <li>
-        <%= link_to("単語登録", "/words/new_word") %>
-      </li>
-      <li>
-        <%= link_to("クイズへの入り口", "/quizzes/new") %>
-      </li>
-      <!-- ユーザー一覧ページへのリンクを作成してください -->
-      <li>
-        <%= link_to("ログアウト", "/sessions/logout") %>
-      </li>
-    </ul>
+      <ul class="menu">
+        <li>
+          <%= link_to("top", "/home/show") %>
+        </li>
+        <li>
+          <%= link_to("ユーザー一覧", "/users/index") %>
+        </li>
+        <li>
+          <%= link_to("単語登録", "/words/new_word") %>
+        </li>
+        <li>
+          <%= link_to("クイズへの入り口", "/quizzes/new") %>
+        </li>
+        <!-- ユーザー一覧ページへのリンクを作成してください -->
+        <li>
+          <%= link_to("ログアウト", "/sessions/logout") %>
+        </li>
+      </ul>
   </body>
 </html>

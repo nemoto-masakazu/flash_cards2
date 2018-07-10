@@ -2,7 +2,17 @@
 <div class="form users-form">
   <div class="form-body">
 
-    <%= form_for @word, :url => {:action => :create} do |f| %>
+    <br>
+
+    <% if @word.nil? %>
+      <% @word = Word.new %>
+      <h2><%= flash[:words_none] %></h2>
+    <% end %>
+
+    <br>
+    <br>
+
+    <%= form_for(@word, :url => {:controller => :words, :action => :create}) do |f| %>
 
       <%= f.label :english, "英語" %>
       <%= f.text_field :english %>
