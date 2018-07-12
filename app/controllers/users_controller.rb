@@ -32,7 +32,9 @@ class UsersController < ApplicationController
     @user = User.new.get_a_registered_user(params[:id])
     if @user.destroy
       @quiz = Quiz.find_by(user_id: params[:id])
-      @quiz.destroy
+      if @quiz != nil
+        @quiz.destroy
+      end
       reset_session
       redirect_to "/sessions/login"
     else
