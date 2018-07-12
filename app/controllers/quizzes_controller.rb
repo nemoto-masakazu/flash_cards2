@@ -5,10 +5,6 @@ class QuizzesController < ApplicationController
   def new
     #ユーザーをランキングに登録
     @quiz = Quiz.new
-    if Quiz.where(user_id: session[:user_id]).empty?
-      @quiz.user_id = session[:user_id]
-      @quiz.save
-    end
   end
 
   def show
@@ -103,6 +99,12 @@ class QuizzesController < ApplicationController
       @correctJapanese = correctJapanese
       @judgeAnswer = judgeAnswer
       @questionsLength = questions.length
+
+      if Quiz.where(user_id: session[:user_id]).empty? && @questionsLength == 0
+        @quiz = Quiz.new
+        @quiz.user_id = session[:user_id]
+        @quiz.save
+      end
 
     else
       session[:ref] = nil # リロード判定のセッションを破棄
