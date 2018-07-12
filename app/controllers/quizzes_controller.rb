@@ -1,6 +1,6 @@
 class QuizzesController < ApplicationController
   before_action :user_logged_in?
-  before_action :destroy_quiz_session, only: [:new, :result]
+  before_action :destroy_quiz_session, only: [:new]
 
   def new
     #ユーザーをランキングに登録
@@ -113,7 +113,12 @@ class QuizzesController < ApplicationController
   end
 
   def result
-    session[:ref] = nil # リロード判定のセッションを破棄
+    if session[:ref]
+      session[:ref] = nil # リロード判定のセッションを破棄
+    end
+    # 何問だったか
+    session[:questionNum] = session[:questionNum] - 1
+
 
     if session[:correctCounter].nil?
 
@@ -121,7 +126,7 @@ class QuizzesController < ApplicationController
       @ranking = Quiz.new.get_ranking
 
       # ランキング表示
-      @rankAmount = Quiz.count("user_id")
+      @rankAmount = Quiz.rank_count
       @yourRank = 0
       @ranking.each do |r|
         if r.id != session[:user_id]
@@ -145,14 +150,14 @@ class QuizzesController < ApplicationController
       @ranking = Quiz.new.get_ranking
 
       # ランキング表示
-      @rankAmount = Quiz.count("user_id")
+      @rankAmount = Quiz.rank_count
       @yourRank = 0
       @ranking.each do |r|
         if r.id != session[:user_id]
           @yourRank = @yourRank + 1
         else r.id == session[:user_id]
-        @yourRank = @yourRank + 1
-        break
+          @yourRank = @yourRank + 1
+          break
         end
       end
     end

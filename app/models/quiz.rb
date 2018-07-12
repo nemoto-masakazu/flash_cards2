@@ -26,4 +26,8 @@ class Quiz < ApplicationRecord
     return dummies
   end
 
+  def self.rank_count
+    Quiz.where.not(correct_answers: nil).count("user_id")
+  end
+
 end

@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
     end
     return if @current_user
     # @current_userが取得できなかった場合はログイン画面にリダイレクト
-    flash[:notice] = "そのページはログインしないと見れないよ！"
+    flash[:danger] = "そのページはログインしないと見れないよ！"
     redirect_to "/sessions/login"
   end
 

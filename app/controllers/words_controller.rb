@@ -25,7 +25,13 @@ class WordsController < ApplicationController
       # mechanizeを利用してスクレイピング、例文として利用
       agent = Mechanize.new
       page = agent.get("https://ejje.weblio.jp/content/#{@word.english}")
-      @example = page.search("table.KejjeYr div.KejjeYrHd")
+      example = page.search("table.KejjeYr div.KejjeYrHd")
+
+      if example.inner_text.empty?
+        @example = ["Sorry", "We couldn't find any examples"]
+      else
+        @example = example.first(2).map{|e| e.inner_text}
+      end
     end
 
   end
@@ -60,7 +66,7 @@ class WordsController < ApplicationController
     else
       if @word.update_attributes(word_params)
         # 更新に成功したときの処理
-        render "show"
+        redirect_to controller: "words", action: "show"
       else
         render "edit"
       end

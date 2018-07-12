@@ -10,10 +10,10 @@ class User < ApplicationRecord
   # 全角正規表現
   CapitalLetter = /\A(?:\p{Hiragana}|\p{Katakana}|[ー－]|[一-龠々])+\z/
   validates :name, {presence: true, uniqueness: true, length: {minimum: 3 }, format: {without: CapitalLetter}}
-  validates :password, {presence: true}
+  validates :password, {presence: true, length: {minimum: 8 }, format: {without: CapitalLetter}}
 
   def get_a_registered_user(id)
-    user = User.find_by_id(id)
+    user = User.find_by(id: id)
     return user
   end
 

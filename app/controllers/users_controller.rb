@@ -31,6 +31,9 @@ class UsersController < ApplicationController
   def destroy
     @user = User.new.get_a_registered_user(params[:id])
     if @user.destroy
+      @quiz = Quiz.find_by(user_id: params[:id])
+      @quiz.destroy
+      reset_session
       redirect_to "/sessions/login"
     else
       render "index"
@@ -46,7 +49,7 @@ class UsersController < ApplicationController
     @quiz = Quiz.new
     if @user.save
       flash[:notice] = "ユーザー登録が完了しました"
-      redirect_to "/home/show"
+      redirect_to "/sessions/login"
     else
       render "users/new"
     end
